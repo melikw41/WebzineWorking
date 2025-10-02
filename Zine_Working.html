@@ -1,37 +1,20 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>ZineWorking Doc</title>
-    <style>
-    .dates {
-        font-size:large;
-        color: rgb(43, 198, 40);
-        Text-align: center;
-        /*how tf do I make this get bigger when you hover over it?*/
-        transition: font-size 0.3s ease;
-        
-    }
-    .dates:hover {
-    font-size: 2.5em;
-    }
-        h1 {
-        color:rgb(22, 119, 255);
-        text-align: center;
-    }
-        h2{
-        color:black;
-        text-align: center;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zine_Working</title>
 
+  <style>
+    /* Embed your custom YaleNew-Bold font */
+    @font-face {
+      font-family: 'YaleNewBold';
+      src: url('fonts/YaleNew-Bold.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+  
     }
-    .p {
-        font-size:large;
-    }
-        div .Heading1 {
-            text-align:center;
-            font-size:xx-large;
-        }
- .hover-container {
+.hover-container {
         position: relative;
         display: inline-block;
         cursor: pointer;
@@ -44,20 +27,135 @@
         width: 200px;
         border: 2px solid #333;
         display: none; /* Hidden by default */
-        z-index: 10;
+        z-index: 1000;
       }
       .hover-container:hover img {
         display: block; /* Show on hover */
       }
-    </style>
+    /* Global font usage */
+    body {
+      margin: 0;
+      background-color: #00356B;
+      font-family: 'YaleNewBold', sans-serif;
+      color: white;
+      padding-top: 80px;
+      cursor: url('cursors/football-pointer.cur.cur'), auto;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      background-color: #002244;
+      text-align: center;
+      font-size: 4em;
+      font-weight: bold;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      font-family: 'YaleNewBold', sans-serif;
+    }
+
+    .field {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px 0;
+      border: 5px solid white;
+      border-radius: 10px;
+      cursor: url('cursors/football-pointer.cur.cur'), auto;
+    }
+
+    .end-zone {
+      background-color: #00356B;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      padding: 20px;
+      border-top: 4px solid white;
+      border-bottom: 4px solid white;
+      font-family: 'YaleNewBold', sans-serif;
+    }
+
+    details {
+      margin: 0;
+      border-top: 4px solid white;
+      overflow: hidden;
+      transition: all 0.3s ease;
     
+    
+      cursor: url('cursors/football-pointer.cur.cur'), auto;
+
+
+    }
+
+    details:nth-of-type(odd) {
+      background-color: #2E8B57;
+    }
+
+    details:nth-of-type(even) {
+      background-color: #3CB371;
+    }
+
+    .content {
+  max-height: 300px;
+  overflow-y: auto;
+  opacity: 0;
+  transition: all 0.5s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-top: 2px dashed white;
+  border-radius: 0 0 5px 5px;
+  font-family: 'YaleNewBold', sans-serif;
+  z-index: 10;
+}
+
+details[open] .content {
+  opacity: 1;
+  padding: 10px;
+}
+
+
+    summary {
+      list-style: none;
+      background-color: transparent;
+      padding: 15px 20px;
+      margin: 0;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: white;
+      border-left: 10px solid white;
+      border-right: 10px solid white;
+      transition: transform 0.2s ease;
+      font-family: 'YaleNewBold', sans-serif;
+    }
+
+    summary:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    summary::marker {
+      display: none;
+    }
+
+  </style>
 </head>
 <body>
-    <h1 class="Heading1"> A collection of Yale Fooball Events </h1>
-<h2 class="Heading1"> In no particular order, with no heavy significance </h2>
-<details>
-<summary class="dates">September 9th, 2025</summary>
-<p>Without warning, Junior defensive end  
+
+  <header>
+    A September in Yale Football
+  </header>
+
+  <div class="field">
+    <!-- Top End Zone -->
+    <div class="end-zone">Y&nbsp;A&nbsp;L&nbsp;E</div>
+
+    <!-- Yard lines -->
+    <details>
+      <summary>10</summary>
+      <div class="content">
+        <p>Without warning, Junior defensive end  
         <span class="hover-container">
         Zairon Jackson-Bass
         <img
@@ -86,34 +184,39 @@
         alt="Preview5"/>
     </span> later joined and helped throw down a beat to bring it all together.
 <br> Head coach Tony Reno’s wife. Mrs. Reno proclaimed that the team must start an oragnized singing group for the team, which was met with agreement by Jackson-Bass and Avera.</p>
-</details>
+      </div>
+    </details>
 
-<details>
-<summary class="dates">September 3rd, 2025</summary>
-<p>A new trend has emerged from the late night dinners. Some athletes after finishing a long practice have decided to start their decompression from within the facility. With the facility accommodating this with the 2 flat screen tv’s in the dining hall, and gaming consoles in the locker room, they have almost no reason to be in a rush to get home. 
+    <details>
+      <summary>20</summary>
+      <div class="content">
+        <p>A new trend has emerged from the late night dinners. Some athletes after finishing a long practice have decided to start their decompression from within the facility. With the facility accommodating this with the 2 flat screen tv’s in the dining hall, and gaming consoles in the locker room, they have almost no reason to be in a rush to get home. 
 This merry crew of Yale football players has started to aptly refer to themselves as the <i>“Late Night Crew”</i>. While there is no clear founder this groups behavior can easily be traced back to the actions of senior  <span class="hover-container">
         Inumidun Ayo-Durojaiye
         <img
         src="https://images.sidearmdev.com/resize?url=https%3a%2f%2fdxbhsrqyrr690.cloudfront.net%2fsidearm.nextgen.sites%2fyalebulldogs.com%2fimages%2f2025%2f8%2f26%2f24_Inumidun_Ayo-Durojaiye.jpg&width=300&type=webp"
         alt="Preview7"/>
-    </span>. The members of the group vary by the day but the actions never change. Always present for late afternoon banter and often sought by younger players as a source of wisdom in the awkward times of adjusting to the college life. The Late Night Crew will always be present to break bread or watch whatever football game is on the tv that evening.</p> 
-</details>
+    </span>. The members of the group vary by the day but the actions never change. Always present for late afternoon banter and often sought by younger players as a source of wisdom in the awkward times of adjusting to the college life. The Late Night Crew will always be present to break bread or watch whatever football game is on the tv that evening.</p>
+      </div>
+    </details>
 
-<details>
-<summary class="dates">September 7th, 2025</summary>
-<p>After a grueling scrimmage, the player get a chance to rest and sleep in on this Sunday, not having any required meetings until noon.but to the player's suprise, today’s post-scrimmage practice is only in helmets and  <span class="hover-container">
+    <details>
+      <summary>30</summary>
+      <div class="content">
+        <p>After a grueling scrimmage, the player get a chance to rest and sleep in on this Sunday, not having any required meetings until noon.but to the player's suprise, today’s post-scrimmage practice is only in helmets and  <span class="hover-container">
         spiderpads
         <img
           src="data:image/jpeg;base64,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" alt="Preview"/>
       </span>! A change up from the usual, which entails the required dress is helmets and shoulder pads.
 “This program has gone soft” claimed one upperclassmen. “Hey i’m not complaining” said another.
-The bulldogs continue to ready themselves for this final grueling week, with a surprising but welcome increase of rest on their war-torn bodies.
-</p>
-</details>
+The bulldogs continue to ready themselves for this final grueling week, with a surprising but welcome increase of rest on their war-torn bodies.</p>
+      </div>
+    </details>
 
-<details>
-<summary class="dates">September 11th, 2025</summary>
-<p>The week is coming to a close and the football team was met with a practice schedule that was longer that the previous day's schedule.<br>
+    <details>
+      <summary>40</summary>
+      <div class="content">
+        <p>The week is coming to a close and the football team was met with a practice schedule that was longer that the previous day's schedule.<br>
 Shocked and appalled, beaten and bruised, some bulldogs were, unsure of what to make of this complete change up. “We literally had to have practice cut short yesterday because all of our <span class="hover-container">
         catapult
         <img
@@ -134,13 +237,14 @@ Shocked and appalled, beaten and bruised, some bulldogs were, unsure of what to 
         <img
         src="https://images.sidearmdev.com/resize?url=https%3a%2f%2fdxbhsrqyrr690.cloudfront.net%2fsidearm.nextgen.sites%2fyalebulldogs.com%2fimages%2f2025%2f8%2f26%2f22_Brady_Wagner.jpg&width=300&type=webp"
         alt="Preview7"/>
-        </span> added. Will this plan work, if they even attempt to execute it? Probably not, but jokes help to lighten th mood knowing the strain they put on their bodies on a daily basis.
-</p>
-</details>
+        </span> added. Will this plan work, if they even attempt to execute it? Probably not, but jokes help to lighten th mood knowing the strain they put on their bodies on a daily basis.</p>
+      </div>
+    </details>
 
-<details>
-<summary class="dates">September 23rd, 2025</summary>
-<p>The players have offically gotten into the swing of the fall, and with that comes the yearly plague that moves throughout the team. A cacophony of coughs and sniffles are heard throughout the meeting room. Senior defensive lineman <span class="hover-container">
+    <details>
+      <summary>50</summary>
+      <div class="content">
+        <p>The players have offically gotten into the swing of the fall, and with that comes the yearly plague that moves throughout the team. A cacophony of coughs and sniffles are heard throughout the meeting room. Senior defensive lineman <span class="hover-container">
         Ezekiel Larry
         <img
         src="https://images.sidearmdev.com/resize?url=https%3a%2f%2fdxbhsrqyrr690.cloudfront.net%2fsidearm.nextgen.sites%2fyalebulldogs.com%2fimages%2f2025%2f8%2f26%2f2_Ezekiel_Larry.jpg&width=300&type=webp"
@@ -154,12 +258,13 @@ Shocked and appalled, beaten and bruised, some bulldogs were, unsure of what to 
         Emergen-C
         <img
         src="https://m.media-amazon.com/images/I/81AJJ7iiB7L._UF894,1000_QL80_.jpg"/>
-        </span> that is kept in the nutrition center but will a little extra vitamin C be enough to keep away this illness? only time will tell
-        </p>
-        </details>
+        </span> that is kept in the nutrition center but will a little extra vitamin C be enough to keep away this illness? only time will tell</p>
+      </div>
+    </details>
 
-        <details>
-    <summary class="dates">September 25th, 2025</summary>
+    <details>
+      <summary>40</summary>
+      <div class="content">
         <p>Yale football has just entered a new era of AI. It all started when freshman reciever <span class="hover-container">
         Lucius Anderson
         <img
@@ -168,6 +273,34 @@ Shocked and appalled, beaten and bruised, some bulldogs were, unsure of what to 
         Jev Hutton
         <img
         src="http://images.sidearmdev.com/resize?url=https%3a%2f%2fdxbhsrqyrr690.cloudfront.net%2fsidearm.nextgen.sites%2fyalebulldogs.com%2fimages%2f2025%2f8%2f26%2f47_Jevidi_Hutton.jpg&width=300&type=webp"/>
-        </span> posed with a mystery girl. The chat went into uproar until it was revealed that the picture was generated through a snapchat AI filter. The following morning the groupchat was flooded with AI generated pictures of the guys, some more obvious than others. Now Saturdays will be even more eventful.
-        </p>
-        </details>
+        </span> posed with a mystery girl. The chat went into uproar until it was revealed that the picture was generated through a snapchat AI filter. The following morning the groupchat was flooded with AI generated pictures of the guys, some more obvious than others. Now Saturdays will be even more eventful.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>30</summary>
+      <div class="content">
+        <p>This is the content for the 70-yard line.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>20</summary>
+      <div class="content">
+        <p>This is the content for the 80-yard line.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>10</summary>
+      <div class="content">
+        <p>This is the content for the 90-yard line.</p>
+      </div>
+    </details>
+
+    <!-- Bottom End Zone -->
+    <div class="end-zone">B&nbsp;U&nbsp;L&nbsp;L&nbsp;D&nbsp;O&nbsp;G&nbsp;S</div>
+  </div>
+
+</body>
+</html>
